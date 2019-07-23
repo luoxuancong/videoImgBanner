@@ -14,9 +14,9 @@
 <div class="swiper-container banner-container">
     <div class="swiper-wrapper">
         <div class="swiper-slide"><a href=""><img src="http://static.home.baidu.com/homebd/ibeackmhjlndfg1519371615.jpg?authorization=bce-auth-v1%2Fe6803def36ae467f81ebdb4bdc75f119%2F2018-02-23T07%3A40%3A15Z%2F-1%2F%2Fb53efaa5ba52b55bc5472d707a2e5a36f2706ceccfbada0d8c9d742cb70f4bc5" alt=""></a></div>
-        <div class="swiper-slide"><video src="https://www.tencent.com/video/video1.mp4" preload=""></video></div>
+        <div class="swiper-slide"><video src="https://www.tencent.com/video/video1.mp4" preload="auto"></video></div>
         <div class="swiper-slide"><a href=""><img src="http://static.home.baidu.com/homebd/ibeackmhjlndfg1519371615.jpg?authorization=bce-auth-v1%2Fe6803def36ae467f81ebdb4bdc75f119%2F2018-02-23T07%3A40%3A15Z%2F-1%2F%2Fb53efaa5ba52b55bc5472d707a2e5a36f2706ceccfbada0d8c9d742cb70f4bc5" alt=""></a></div>
-        <div class="swiper-slide"><video src="https://www.tencent.com/video/video1.mp4" preload=""></video></div>
+        <div class="swiper-slide"><video src="https://www.tencent.com/video/video1.mp4" preload="auto"></video></div>
     </div>
     <div class="swiper-pagination"></div>
     <div class="swiper-button-next"></div>
@@ -59,21 +59,19 @@
 	            Swiper1.stopAutoplay();
 	            // 动态增加id
 	            $(".banner-container .swiper-slide-active video").attr("id","video_01");
+
 	            var _video=document.getElementById("video_01");
+				
 	            // 播放视频
 	            _video.play();
-	
 	            // 切换后重新播放视频
 	            _video.currentTime = 0;
 	            // 静音
 	            _video.volume = 0;
 	            // 监听视频播放结束
 	            _video.addEventListener('ended', function () {  
-
 	                Swiper1.slideNext();
-
 	                //重新开始轮播banner
-	                
 	                Swiper1.startAutoplay();
 	            });
 	        }
